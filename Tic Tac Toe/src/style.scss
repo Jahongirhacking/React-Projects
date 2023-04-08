@@ -1,0 +1,96 @@
+$myColor: #121212;
+
+$small: 550px;
+
+body {
+    background-color: $myColor;
+    padding: 30px;
+    min-height: 100vh;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    .game {
+        display: flex;
+
+        @media screen and (max-width: $small) {
+            display: grid;
+        }
+
+        .game-history {
+
+            @media screen and (max-width: $small) {
+                margin-top: 20px;
+            }
+            
+            li {
+                align-items: center;
+                list-style-position: inside;
+                margin-bottom: 10px;
+
+                button {
+                    min-width: 28px;
+                    min-height: 28px;
+                    padding: 7px 10px;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                }
+            }
+        }
+        .game-board {
+            display: grid;
+            grid-area: "stat"
+                        "game";
+
+            @media screen and (max-width: $small) {
+                width: 95%;
+            }
+
+            .status {
+                grid: stat;
+                font-size: 17pt;
+                color: white;
+                margin-bottom: 25px;
+                
+            }
+
+            .game-field {
+                grid: game;
+                height: max-content;
+                .row {
+                    display: flex;
+                    justify-content: space-around;
+                }
+                button {
+                    border: none;
+                    background-color: rgb(65, 139, 224);
+                    color: white;
+                    border-radius: 4px;
+                    padding: 10px 15px;
+                    margin: 2px 2px;
+                    font-size: 3rem;
+                    font-weight: bold;
+                    width: 100px;
+                    height: 100px;
+                    cursor: pointer;
+                    transition: 0.1s ease;
+                    transition-property: background-color;
+                    &:active {
+                        background-color: rgb(127, 183, 248);
+                    }
+
+                    @media screen and (max-width: $small) {
+                        width: 30%;
+                        height: 60px;
+                        min-height: 30%;
+                        font-size: 20pt;
+                    }
+                }
+                
+            } 
+        }
+    }
+}
