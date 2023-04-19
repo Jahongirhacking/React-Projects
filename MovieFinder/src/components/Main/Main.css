@@ -1,0 +1,11 @@
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 5px;
+    padding: 20px 3px;
+    background-color: rgb(10, 10, 10);
+    color: rgb(178, 255, 188);
+    height: calc(100vh - 130px);
+    overflow: auto;
+}
