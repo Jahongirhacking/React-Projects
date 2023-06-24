@@ -1,0 +1,26 @@
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.add-btn {
+    transform-origin: left top;
+    display: block;
+    position: fixed;
+    border-radius: 0 0 10px 10px;
+    background-color: orangered;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    cursor: pointer;
+    transform: rotate(-90deg) translateX(-50%);
+    left: 0;
+    top: 50%;
+}
+
+@media screen and (max-width: 300px) {
+    footer {
+        font-size: 0.8rem;
+    }
+}

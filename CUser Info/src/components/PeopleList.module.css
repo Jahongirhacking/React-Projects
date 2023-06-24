@@ -1,0 +1,67 @@
+.card-container {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px 5%;
+    background-color: aliceblue;
+    width: 100%;
+    align-content: flex-start;
+}
+
+.card-container > h1 {
+    font-size: 5rem;
+    margin-top: 15%;
+    color: rgba(0, 0, 0, 0.225);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 220px;
+    border: 1px solid grey;
+    padding: 10px 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.573);
+    border-radius: 5px;
+    transition: 0.4s ease;
+    background-color: white;
+}
+
+.card:hover {
+    transform: scale(1.01);
+}
+
+.card__img {
+    aspect-ratio: 1 / 1;
+    width: 80%;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 10px;
+}
+
+.card__delete-btn {
+    border: 1px solid red;
+    color: red;
+    background-color: white;
+    transition: 0.4s ease;
+}
+
+.card__delete-btn:hover {
+    border: 1px solid white;
+    background-color: red;
+    color: white;
+}
+
+@media screen and (max-width: 500px) {
+    .card-container > h1 {
+        font-size: 3.3rem;
+        margin-top: 30%;
+        color: rgba(0, 0, 0, 0.225);
+    }
+}

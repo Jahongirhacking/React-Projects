@@ -1,0 +1,102 @@
+[
+    {
+        "imageUrl": "https://remezcla.com/wp-content/uploads/2023/04/Spider-Man-Across-the-Spider-Verse-Film-1200x1800.jpg",
+        "firstname": "Miles",
+        "lastname": "Morales",
+        "age": "17",
+        "from": "Earth-1610",
+        "job": "Spider-Man",
+        "gender": "male",
+        "id": "637994ef-8b25-41e2-8667-adb0ea878047"
+    },
+    {
+        "imageUrl": "https://media.tenor.com/vahclBKVjAsAAAAC/across-the-spiderverse-miles-morales.gif",
+        "firstname": "Gwen",
+        "lastname": "Stacy",
+        "age": "19",
+        "from": "Earth-65",
+        "job": "Ghost-SPider",
+        "gender": "female",
+        "id": "750551f5-fd43-41a5-8cc3-ec59d1be253a"
+    },
+    {
+        "imageUrl": "https://images.thedirect.com/media/article_full/miguel-spider-man-2099.jpg",
+        "firstname": "Miguel",
+        "lastname": "O'hara",
+        "age": "30",
+        "from": "Earth-2099",
+        "job": "Spider-Man",
+        "gender": "male",
+        "id": "c095cf5c-f30a-4eea-9671-ce70146056ac"
+    },
+    {
+        "imageUrl": "https://wikiofnerds.com/wp-content/uploads/2023/05/Spider-verse-2-Shockingly-Kills-Off-A-Beloved-Character-In-Controversial-Twist.jpg",
+        "firstname": "Jefferson",
+        "lastname": "Davis",
+        "age": "44",
+        "from": "USA",
+        "job": "Captain",
+        "gender": "male",
+        "id": "10ce67a9-b0c1-4b5a-8f81-836232c4c45a"
+    },
+    {
+        "imageUrl": "https://www.looper.com/img/gallery/spidey-fans-see-all-the-telltale-signs-of-peter-b-parkers-doom-in-across-the-spider-verse/intro-1670971315.jpg",
+        "firstname": "Peter",
+        "lastname": "Parker",
+        "age": "38",
+        "from": "Earth-616",
+        "job": "Spider-Man",
+        "gender": "male",
+        "id": "16f11e4e-8912-452c-b051-7391bdd3495e"
+    },
+    {
+        "imageUrl": "https://static.wikia.nocookie.net/sonypicturesanimation/images/8/84/Profile_-_Rio_Morales.png",
+        "firstname": "Rio",
+        "lastname": "Morales",
+        "age": "43",
+        "from": "USA",
+        "job": "Nurse",
+        "gender": "female",
+        "id": "b4235adb-1b6a-4326-a6ad-60f1b47dd2d7"
+    },
+    {
+        "imageUrl": "https://i.ytimg.com/vi/ir-TFMa2fiM/maxresdefault.jpg",
+        "firstname": "Jessica",
+        "lastname": "Drew",
+        "age": "35",
+        "from": "Earth-616",
+        "job": "Spider-Woman",
+        "gender": "female",
+        "id": "f4282063-4a5e-4f1f-9206-1859e71efad2"
+    },
+    {
+        "imageUrl": "https://hips.hearstapps.com/hmg-prod/images/ben-reilly-spider-man-across-the-spider-verse-6475c68551026.jpg",
+        "firstname": "Benjamin",
+        "lastname": "Reilly",
+        "age": "34",
+        "from": "Earth-982",
+        "job": "Scarlet-Spiderman",
+        "gender": "male",
+        "id": "4013df67-0ee4-4d2b-af66-0631157d84a9"
+    },
+    {
+        "imageUrl": "https://cdn.mos.cms.futurecdn.net/dWLYxQGa5vBmFMYr3NfYv4.jpg",
+        "firstname": "Peter",
+        "lastname": "Parker",
+        "age": "32",
+        "from": "Earth-90214",
+        "job": "Noir-Spiderman",
+        "gender": "male",
+        "id": "97f36da7-6d10-4f0c-ada1-099ed6d07c16"
+    },
+    {
+        "imageUrl": "https://static.wikia.nocookie.net/marvelmovies/images/3/36/Mary_Jane_Watson_616_SITS.png",
+        "firstname": "Mary",
+        "lastname": "Jane",
+        "age": "30",
+        "from": "Earth-1610",
+        "job": "Journalist",
+        "gender": "female",
+        "id": "799223e3-e76a-4164-b8b9-94105cccd224"
+    }
+]

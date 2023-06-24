@@ -1,0 +1,32 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+}
+
+.form > label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+.form > label > input {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 3px 5px;
+    border: 1px solid grey;
+}
+
+.gender-label {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.submit-btn {
+    background-color: orangered;
+    color: white;
+    margin: auto;
+}
