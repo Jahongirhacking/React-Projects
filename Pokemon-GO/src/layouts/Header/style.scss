@@ -1,0 +1,26 @@
+@import '../../styles/colors.scss';
+
+.header {
+  align-items: center;
+  background-color: $dark-color;
+  display: flex;
+  font-size: 14pt;
+  justify-content: center;
+  padding: 25px 0;
+  width: 100%;
+  @media (max-width: 500px) {
+    font-size: 12pt;
+  }
+
+  .header__search {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+
+    .btn-container {
+      display: flex;
+      gap: 15px;
+    }
+  }
+}

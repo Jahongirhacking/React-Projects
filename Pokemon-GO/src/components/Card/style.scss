@@ -1,0 +1,36 @@
+@import '../../styles/colors.scss';
+
+.card {
+  align-items: center;
+  background-color: $primary-color;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+  padding: 0 8px 15px;
+  text-align: center;
+  transition: 0.4s ease;
+  width: calc(31vw - 30px);
+
+  @media (max-width: 500px) {
+    gap: 5px;
+    width: calc(32vw - 20px);
+  }
+
+  &:hover {
+    transform: scale(1.03);
+  }
+
+  img {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 16pt;
+    font-weight: bold;
+    @media (max-width: 500px) {
+      font-size: 10pt;
+    }
+  }
+}
