@@ -1,0 +1,107 @@
+.main {
+  padding: 1rem 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+
+  * {
+    width: 90%;
+  }
+
+  h1 {
+    @media screen and (max-width: 500px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .phone-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid gray;
+      background-color: azure;
+      border-radius: 5px;
+      overflow: hidden;
+      width: 100%;
+
+      @media screen and (max-width: 500px) {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .details {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        @media screen and (max-width: 500px) {
+          flex-direction: column;
+        }
+
+        img {
+          width: 200px;
+        }
+
+        .specific-info {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          @media screen and (max-width: 500px) {
+            text-align: center;
+            align-items: center;
+          }
+
+          button {
+            width: fit-content;
+            padding: 2px 5px;
+          }
+        }
+      }
+
+      .btn-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        padding: 10px 15px;
+        width: fit-content;
+
+        button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 30px;
+          width: 30px;
+          font-size: 1.2rem;
+        }
+
+        span {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+
+    span {
+      width: fit-content;
+    }
+  }
+
+  .clear-btn {
+    width: fit-content;
+    padding: 5px 15px;
+  }
+}

@@ -1,0 +1,31 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4rem;
+  background-color: blue;
+  color: white;
+
+  .cart {
+    position: relative;
+    .cart-logo {
+      font-size: 2rem;
+    }
+
+    .badge {
+      position: absolute;
+      top: -12px;
+      right: -12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background-color: rgba(255, 255, 255, 0.877);
+      border-radius: 50%;
+      color: black;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+  }
+}
