@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Cabin Sketch", sans-serif;
+  user-select: none;
+}
+
+#root {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: #ba4949;
+  color: white;
+  font-size: 17pt;
+  padding: 60px 10px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 20px;
+    background-color: #ffffff1a;
+    padding: 40px 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 3px #ffffff2a;
+    position: relative;
+
+    .pomodoro-img {
+      width: 80px;
+      position: absolute;
+      top: -48px;
+      left: 50%;
+      transform: translateX(-40px);
+      opacity: 0.8;
+    }
+
+    .length {
+      display: flex;
+      column-gap: 35px;
+      @media screen and (max-width: 400px) {
+        flex-direction: column;
+        row-gap: 20px;
+        order: 1;
+      }
+
+      .length-control {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        align-items: center;
+
+        .control {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+
+          button {
+            border: none;
+            color: white;
+            background-color: #ba4949;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .timer-controls {
+      display: flex;
+      column-gap: 15px;
+      @media screen and (max-width: 250px) {
+        flex-direction: column;
+        row-gap: 10px;
+      }
+
+      button {
+        color: #ba4949;
+        background-color: white;
+        border: none;
+        padding: 5px 10px;
+        font-size: 17pt;
+        cursor: pointer;
+        border-radius: 3px;
+        font-weight: 700;
+      }
+    }
+
+    #time-left {
+      font-size: 35pt;
+
+      &.alert {
+        color: red !important;
+      }
+    }
+  }
+
+  span.author {
+    font-size: 12pt;
+
+    a {
+      color: white;
+    }
+  }
+}
