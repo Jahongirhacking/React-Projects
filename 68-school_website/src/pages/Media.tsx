@@ -1,7 +1,10 @@
-import { Card, Divider, Flex, Image, Typography } from "antd";
+import { Button, Card, Divider, Flex, Image, Typography } from "antd";
 import { image1, image2, image3, image4, image5, image6 } from "../assets/images/media";
 import { useSelector } from "react-redux";
 import { IStore } from "../app/store";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 interface IMedia {
     src: string,
@@ -36,6 +39,11 @@ const media: IMedia[] = [
 ]
 
 const Media = () => {
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
+
     const themeColor = useSelector((state: IStore) => state.theme);
 
     return (
@@ -51,6 +59,7 @@ const Media = () => {
             <Flex className="cards-container">
                 {media.map((image: IMedia, index: number) => (
                     <Card
+                        data-aos={index % 3 === 0 ? "fade-right" : index % 3 === 1 ? "fade-up" : "fade-left"}
                         hoverable
                         key={index}
                         cover={
@@ -67,6 +76,9 @@ const Media = () => {
                 ))
                 }
             </Flex>
+            <Button href="https://www.google.com/maps/place/G'uzor+tumanidagi+68-sonli+aniq+fanlarga+ixtisoslashtirilgan+maktab+internati/@38.6220831,66.2564984,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipO7CKHG3b-0P8eow19rkQlL_hR8WHXKrh38hAwP!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipO7CKHG3b-0P8eow19rkQlL_hR8WHXKrh38hAwP%3Dw397-h298-k-no!7i1333!8i1000!4m9!3m8!1s0x3f4b93da0c07c2c7:0x8069a74ab18448bf!8m2!3d38.6220831!4d66.2564984!10e5!14m1!1BCgIgAQ!16s%2Fg%2F11s76x1_6x?entry=ttu#">
+                Ko'proq Ko'rish
+            </Button>
         </section>
     )
 }

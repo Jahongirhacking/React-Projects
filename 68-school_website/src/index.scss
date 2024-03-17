@@ -184,6 +184,7 @@ a {
     .media {
       @include makeSectionWithDivider();
       padding: 40px 10px;
+      align-items: center;
 
       .cards-container {
         flex-wrap: wrap;
