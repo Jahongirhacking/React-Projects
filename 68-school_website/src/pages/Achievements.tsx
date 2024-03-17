@@ -1,5 +1,9 @@
 import { Card, Divider, Flex, Typography } from "antd"
 import { professionImage, scienceImage, universityImage, extracurriculumImage } from "../assets/images/achievements"
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 
 interface ICard {
     image: {
@@ -46,6 +50,11 @@ const cards: ICard[] = [
 ]
 
 const Achievements = () => {
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
+
     return (
         <section id="achievements" className="achievements">
             <Divider className="divider">
@@ -60,6 +69,7 @@ const Achievements = () => {
                 {
                     cards.map((card: ICard, index: number) => (
                         <Card
+                            data-aos="fade-up"
                             hoverable
                             key={index}
                             style={{ width: 240 }}
