@@ -1,7 +1,12 @@
-import { FileImageOutlined, FireOutlined, InfoCircleOutlined, LoginOutlined, MailOutlined } from "@ant-design/icons"
-import { MenuProps, Menu } from "antd";
+import { FileImageOutlined, FireOutlined, InfoCircleOutlined, LoginOutlined, MailOutlined, MenuOutlined } from "@ant-design/icons"
+import { MenuProps, Menu, Drawer } from "antd";
 import logo from "../assets/images/68Logo.png"
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { IStore } from "../app/store";
+import ThemeButton from "../components/ThemeButton";
+
+const MEDIUM_SIZE = 950;
 
 const items: MenuProps['items'] = [
     {
@@ -53,7 +58,12 @@ const items: MenuProps['items'] = [
 ]
 
 const Navbar = () => {
+
     const [windowScrollY, setWindowScrollY] = useState(window.scrollY);
+    const [showNavbar, setShowNavbar] = useState(window.innerWidth > MEDIUM_SIZE);
+    const [open, setOpen] = useState(false);
+    const themeColor = useSelector((state: IStore) => state.theme);
+
 
     useEffect(() => {
         const handleScroll = () => {
@@ -66,11 +76,38 @@ const Navbar = () => {
         };
     }, []); // Empty dependency array to run the effect only once
 
+
+    useEffect(() => {
+        const handleWidth = () => {
+            setShowNavbar(window.innerWidth > MEDIUM_SIZE);
+        };
+        window.addEventListener('resize', handleWidth);
+        // Cleanup
+        return () => {
+            window.removeEventListener('resize', handleWidth);
+        };
+    }, []); // Empty dependency array to run the effect only once
+
     return (
         <nav className={`header__nav ${windowScrollY > 100 ? "active" : ""}`}>
             <img src={logo} className="logo" />
-            <Menu mode="horizontal" items={items} theme="dark" className="nav__menu" />
-        </nav>
+            {
+                showNavbar
+                    ? <Menu mode="horizontal" items={items} theme="dark" className="nav__menu" />
+                    : <>
+                        <MenuOutlined style={{ color: "#fff", fontSize: "18pt" }} onClick={() => { setOpen(true) }} />
+                        <Drawer
+                            title="Bo'limlarni tanlang:"
+                            onClose={() => { setOpen(false) }}
+                            open={open}
+                            footer={<span style={{ color: themeColor === "dark" ? "#fff" : "#000" }}>Qashqadaryo viloyati G'uzor tumani 68-sonli ixtisoslashtirilgan maktab internati</span>}
+                        >
+                            <Menu mode="vertical" items={items} className="nav__menu" onClick={() => { setOpen(false) }} />
+                            <ThemeButton />
+                        </Drawer>
+                    </>
+            }
+        </nav >
     )
 }
 

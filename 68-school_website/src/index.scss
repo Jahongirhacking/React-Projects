@@ -4,7 +4,7 @@ $primary-color: #019f67;
 $dark-color: #11111170;
 
 * {
-  box-sizing: border-box;
+  box-sizing: border-box !important;
   padding: 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -17,8 +17,13 @@ a {
   cursor: pointer;
 }
 
+.ant-drawer-footer {
+  text-align: center;
+}
+
 #root {
   min-height: 100dvh;
+  overflow-x: hidden;
 
   .header {
     position: fixed;
@@ -127,9 +132,16 @@ a {
             display: flex;
             align-items: center;
             justify-content: center;
-            // margin: auto;
-            // max-width: 200px;
           }
+        }
+      }
+
+      @media screen and (max-width: 510px) {
+        &__title {
+          font-size: 2.5rem !important;
+        }
+        &__text {
+          font-size: 11pt !important;
         }
       }
     }
@@ -143,10 +155,6 @@ a {
 
     .achievements {
       @include makeSectionWithDivider();
-
-      // &__title {
-      //   margin-bottom: 0;
-      // }
 
       .cards-container {
         width: 100%;
@@ -175,7 +183,6 @@ a {
 
     .media {
       @include makeSectionWithDivider();
-      background-color: #e2e2e2;
       padding: 40px 10px;
 
       .cards-container {
@@ -220,7 +227,7 @@ a {
     gap: 20px;
     flex-wrap: wrap;
 
-    * {
+    & > * {
       color: white;
     }
 
@@ -265,6 +272,35 @@ a {
           }
         }
       }
+    }
+  }
+
+  .ant-card-cover {
+    border-radius: 8px 8px 0 0;
+    min-height: 100px;
+    background-image: url("/default.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .ant-divider-inner-text {
+    min-width: 340px;
+  }
+  .divider span {
+    white-space: normal;
+  }
+
+  .ant-drawer-footer {
+    font-size: 9pt;
+  }
+
+  @media screen and (max-width: 460px) {
+    .divider h2 {
+      font-size: 16pt;
+    }
+    .divider span {
+      font-size: 10pt;
     }
   }
 }

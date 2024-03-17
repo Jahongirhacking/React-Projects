@@ -1,5 +1,6 @@
 import { FacebookOutlined, InstagramOutlined, SendOutlined, YoutubeOutlined } from "@ant-design/icons"
 import { Space, Typography } from "antd"
+import ThemeButton from "../components/ThemeButton"
 
 const Footer = () => {
     return (
@@ -7,6 +8,7 @@ const Footer = () => {
             <Typography.Paragraph className="footer__copyright">
                 © Copyright 2020-{new Date().getFullYear()}<br />
                 Web sayt 68-sonli DIMIning o'quvchisi <a href="https://Jahongirhacking.netlify.app">Hayitov Jahongir</a> tomonidan ishlab chiqildi
+                <ThemeButton />
             </Typography.Paragraph>
             <Space direction="vertical" size={20} className="contact-details">
                 <div className="links">

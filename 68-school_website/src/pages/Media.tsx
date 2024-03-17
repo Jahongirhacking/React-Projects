@@ -1,5 +1,7 @@
 import { Card, Divider, Flex, Image, Typography } from "antd";
 import { image1, image2, image3, image4, image5, image6 } from "../assets/images/media";
+import { useSelector } from "react-redux";
+import { IStore } from "../app/store";
 
 interface IMedia {
     src: string,
@@ -34,9 +36,11 @@ const media: IMedia[] = [
 ]
 
 const Media = () => {
+    const themeColor = useSelector((state: IStore) => state.theme);
+
     return (
-        <section id="media" className="media">
-            <Divider>
+        <section id="media" className="media" style={{ backgroundColor: themeColor === "dark" ? "#0e0e0e" : "#e2e2e2" }}>
+            <Divider className="divider">
                 <Typography.Title level={2} className="media__title">
                     MEDIA VA RASMLAR
                 </Typography.Title>

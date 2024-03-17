@@ -65,7 +65,7 @@ const items: CollapseProps['items'] = [
 const About = () => {
     return (
         <section id="about" className="about">
-            <Divider>
+            <Divider className="divider">
                 <Typography.Title level={2} className="about__title">
                     Biz Haqimizda
                 </Typography.Title>
@@ -73,7 +73,7 @@ const About = () => {
                     Maktabimizning faoliyati haqida qisqacha savollarga javoblar
                 </Typography.Text>
             </Divider>
-            <Collapse items={items} defaultActiveKey={['1']} className="about__collapse" />
+            <Collapse items={items} defaultActiveKey={['1', '2', '3']} className="about__collapse" />
         </section>
     )
 }

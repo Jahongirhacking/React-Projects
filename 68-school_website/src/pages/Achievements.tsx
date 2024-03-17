@@ -48,7 +48,7 @@ const cards: ICard[] = [
 const Achievements = () => {
     return (
         <section id="achievements" className="achievements">
-            <Divider>
+            <Divider className="divider">
                 <Typography.Title level={2} className="achievements__title">
                     YUTUQLAR
                 </Typography.Title>
