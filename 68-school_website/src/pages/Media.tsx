@@ -76,7 +76,7 @@ const Media = () => {
                 ))
                 }
             </Flex>
-            <Button href="https://www.google.com/maps/place/G'uzor+tumanidagi+68-sonli+aniq+fanlarga+ixtisoslashtirilgan+maktab+internati/@38.6220831,66.2564984,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipO7CKHG3b-0P8eow19rkQlL_hR8WHXKrh38hAwP!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipO7CKHG3b-0P8eow19rkQlL_hR8WHXKrh38hAwP%3Dw397-h298-k-no!7i1333!8i1000!4m9!3m8!1s0x3f4b93da0c07c2c7:0x8069a74ab18448bf!8m2!3d38.6220831!4d66.2564984!10e5!14m1!1BCgIgAQ!16s%2Fg%2F11s76x1_6x?entry=ttu#">
+            <Button href="https://drive.google.com/drive/folders/1RlGiiTB2LOipZfBXctR7Dhygds3gQ6tu">
                 Ko'proq Ko'rish
             </Button>
         </section>
